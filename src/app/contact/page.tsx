@@ -59,7 +59,7 @@ export default function ContactPage() {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/admin@keynotenterprises.in",
+        "https://formsubmit.co/ajax/nileshkhaetri@gmail.com",
         {
           method: "POST",
           headers: {
