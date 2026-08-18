@@ -208,7 +208,7 @@ export default function Footer() {
               {/* Phone */}
 
               <a
-                href="tel:+919076039116"
+                href="tel:+91 9167411991"
                 className="flex items-center gap-3 transition-colors duration-200 hover:text-[#F7941D]"
               >
 
@@ -218,7 +218,7 @@ export default function Footer() {
                 />
 
                 <span className="text-xs text-slate-300 hover:text-[#F7941D]">
-                  +91 9076039116
+                  +91  9167411991
                 </span>
 
               </a>
@@ -251,7 +251,7 @@ export default function Footer() {
                 />
 
                 <span className="text-xs leading-5 text-slate-300">
-                  IT & Business Technology Services
+                Mumbai, india
                 </span>
 
               </div>

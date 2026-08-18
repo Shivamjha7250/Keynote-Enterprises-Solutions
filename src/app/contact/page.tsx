@@ -218,7 +218,7 @@ export default function ContactPage() {
               {/* PHONE */}
 
               <a
-                href="tel:+919076039116"
+                href="tel:+91 9167411991"
                 className="group rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#00AEEF]/30 hover:shadow-lg"
               >
 
@@ -236,7 +236,7 @@ export default function ContactPage() {
                 </h3>
 
                 <p className="mt-2 text-sm font-semibold text-slate-700">
-                  +91 9076039116
+                  +91  9167411991
                 </p>
 
                 <p className="mt-1 text-xs text-slate-500">
@@ -293,7 +293,7 @@ export default function ContactPage() {
                 </h3>
 
                 <p className="mt-2 text-xs leading-5 text-slate-500">
-                  IT &amp; Business Technology Services
+                    Mumbai, india
                 </p>
 
               </div>
@@ -399,7 +399,7 @@ export default function ContactPage() {
                 <div className="mt-4 space-y-3">
 
                   <a
-                    href="tel:+919076039116"
+                    href="tel:+91 9167411991"
                     className="flex items-center gap-3 text-sm font-semibold text-[#0B3C5D] transition hover:text-[#F7941D]"
                   >
 
@@ -408,7 +408,7 @@ export default function ContactPage() {
                       className="text-[#00AEEF]"
                     />
 
-                    +91 9076039116
+                    +91  9167411991
 
                   </a>
 
@@ -752,11 +752,11 @@ export default function ContactPage() {
               </Link>
 
               <a
-                href="tel:+919076039116"
+                href="tel:+91 9167411991"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white/80 px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-white hover:text-[#0B3C5D]"
               >
                 <Phone size={17} />
-                +91 9076039116
+                +91  9167411991
               </a>
 
             </div>
