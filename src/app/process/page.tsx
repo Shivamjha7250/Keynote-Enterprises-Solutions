@@ -112,54 +112,64 @@ export default function ProcessPage() {
             HERO
         ================================================== */}
 
-        <section className="relative overflow-hidden bg-gradient-to-r from-[#072B52] via-[#0B3C5D] to-[#0E5A88] py-20 sm:py-24 lg:py-28">
-          <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-[#00AEEF]/20 blur-3xl" />
+       <section
+  className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-10 sm:py-12 lg:py-14"
+  style={{ backgroundImage: "url('/breadcrumb-bg.png')" }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-[#072B52]/65" />
 
-          <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-[#F7941D]/10 blur-3xl" />
+  <div className="relative mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-10">
+    <div className="max-w-3xl">
 
-          <div className="relative mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-10">
-            <div className="max-w-3xl">
-              <div className="mb-5 flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-[#F7941D]" />
+      {/* Label */}
+      <div className="mb-5 flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-[#F7941D]" />
 
-                <span className="text-xs font-bold uppercase tracking-[2.5px] text-[#F7941D]">
-                  Our Process
-                </span>
-              </div>
+        <span className="text-xs font-bold uppercase tracking-[2.5px] text-[#F7941D]">
+          Our Process
+        </span>
+      </div>
 
-              <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-                A Clear Process for
-                <br />
-                <span className="text-[#F7941D]">
-                  Reliable IT Solutions
-                </span>
-              </h1>
+      {/* Heading */}
+      <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+        A Clear Process for
+        <br />
+        <span className="text-[#F7941D]">
+          Reliable IT Solutions
+        </span>
+      </h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">
-                From initial consultation to implementation and ongoing
-                support, we follow a structured process to deliver
-                practical and dependable technology solutions.
-              </p>
+      {/* Description */}
+      <p className="mt-6 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">
+        From initial consultation to implementation and ongoing
+        support, we follow a structured process to deliver
+        practical and dependable technology solutions.
+      </p>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#F7941D] px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#df8214]"
-                >
-                  Start Your Project
-                  <ArrowRight size={17} />
-                </Link>
+      {/* Buttons */}
+      <div className="mt-8 flex flex-wrap gap-4">
 
-                <a
-                  href="#process-steps"
-                  className="inline-flex items-center gap-2 rounded-lg border-2 border-white/80 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#0B3C5D]"
-                >
-                  Explore Our Process
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Link
+          href="/#contact"
+          className="inline-flex items-center gap-2 rounded-lg bg-[#F7941D] px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#df8214]"
+        >
+          Start Your Project
+          <ArrowRight size={17} />
+        </Link>
+
+        <a
+          href="#process-steps"
+          className="inline-flex items-center gap-2 rounded-lg border-2 border-white/80 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#0B3C5D]"
+        >
+          Explore Our Process
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* ==================================================
             INTRO

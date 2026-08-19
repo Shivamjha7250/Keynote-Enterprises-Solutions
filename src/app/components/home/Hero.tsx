@@ -2,10 +2,16 @@
 
 import { useEffect, useState } from "react";
 
-const banners = [
+const desktopBanners = [
   "/banners/banner1.png",
   "/banners/banner2.png",
   "/banners/banner3.png",
+];
+
+const mobileBanners = [
+  "/banners/banner1-mobile.png",
+  "/banners/banner2-mobile.png",
+  "/banners/banner3-mobile.png",
 ];
 
 export default function Hero() {
@@ -13,38 +19,16 @@ export default function Hero() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => {
-        if (prev === banners.length - 1) {
-          return 0;
-        }
-
-        return prev + 1;
-      });
+      setCurrentSlide((prev) =>
+        prev === desktopBanners.length - 1 ? 0 : prev + 1
+      );
     }, 4000);
 
-    return () => {
-      clearInterval(timer);
-    };
+    return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => {
-      if (prev === banners.length - 1) {
-        return 0;
-      }
-
-      return prev + 1;
-    });
-  };
-
-  const previousSlide = () => {
-    setCurrentSlide((prev) => {
-      if (prev === 0) {
-        return banners.length - 1;
-      }
-
-      return prev - 1;
-    });
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
   };
 
   return (
@@ -52,58 +36,80 @@ export default function Hero() {
       id="home"
       className="relative w-full overflow-hidden bg-white"
     >
-      {/* Banner container */}
       <div className="relative w-full">
 
-        {/* Image keeps its original ratio.
-            This prevents cropping. */}
+        {/* ==============================
+            DESKTOP IMAGE - 1920 x 700
+        =============================== */}
+
+        {/* Invisible image reserves correct desktop height */}
         <img
-          src={banners[0]}
+          src={desktopBanners[0]}
           alt=""
           aria-hidden="true"
-          className="block h-auto w-full opacity-0"
+          className="hidden h-auto w-full lg:block"
         />
 
-        {/* Actual banners */}
-        {banners.map((banner, index) => (
-          <img
+        {/* ==============================
+            MOBILE IMAGE - 1080 x 1350
+        =============================== */}
+
+        {/* Invisible image reserves correct mobile height */}
+        <img
+          src={mobileBanners[0]}
+          alt=""
+          aria-hidden="true"
+          className="block h-auto w-full lg:hidden"
+        />
+
+        {/* ==============================
+            SLIDES
+        =============================== */}
+
+        {desktopBanners.map((banner, index) => (
+          <picture
             key={banner}
-            src={banner}
-            alt={`Keynote Enterprises Solutions Banner ${index + 1}`}
-            className={`absolute left-0 top-0 h-auto w-full transition-opacity duration-700 ${
+            className={`absolute inset-0 block transition-opacity duration-700 ${
               currentSlide === index
                 ? "z-10 opacity-100"
                 : "z-0 opacity-0"
             }`}
-            draggable={false}
-          />
+          >
+            {/* Mobile */}
+            <source
+              media="(max-width: 1023px)"
+              srcSet={mobileBanners[index]}
+            />
+
+            {/* Desktop */}
+            <img
+              src={banner}
+              alt={`Keynote Enterprises Solutions Banner ${index + 1}`}
+              className="block h-auto w-full"
+              draggable={false}
+            />
+          </picture>
         ))}
 
-        {/* Previous button */}
-        
+        {/* ==============================
+            DOTS
+        =============================== */}
 
-        {/* Next button */}
-       
-
-        {/* Dots */}
-        <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-          {banners.map((_, index) => (
+        <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
+          {desktopBanners.map((_, index) => (
             <button
               key={index}
               type="button"
-              onClick={() => setCurrentSlide(index)}
+              onClick={() => goToSlide(index)}
               aria-label={`Go to banner ${index + 1}`}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 currentSlide === index
                   ? "w-8 bg-[#F7941D]"
-                  : "w-2.5 bg-black/40"
+                  : "w-2.5 bg-white/70"
               }`}
             />
           ))}
         </div>
-
-        {/* Counter */}
-       
       </div>
     </section>
   );

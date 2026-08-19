@@ -94,62 +94,63 @@ export default function TestimonialsPage() {
             HERO
         ========================= */}
 
-        <section className="relative overflow-hidden bg-gradient-to-r from-[#072B52] via-[#0B3C5D] to-[#0E5A88] py-20 sm:py-24 lg:py-28">
+       <section
+  className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-10 sm:py-12 lg:py-14"
+  style={{ backgroundImage: "url('/breadcrumb-bg.png')" }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-[#072B52]/65" />
 
-          <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-[#00AEEF]/20 blur-3xl" />
+  <div className="relative mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-10">
+    <div className="mx-auto max-w-3xl text-center">
 
-          <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-[#F7941D]/10 blur-3xl" />
+      {/* Label */}
+      <div className="mb-5 flex items-center justify-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-[#F7941D]" />
 
-          <div className="relative mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-10">
+        <span className="text-xs font-bold uppercase tracking-[2.5px] text-[#F7941D]">
+          Client Testimonials
+        </span>
+      </div>
 
-            <div className="mx-auto max-w-3xl text-center">
+      {/* Heading */}
+      <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+        What Our{" "}
+        <span className="text-[#F7941D]">
+          Clients Say
+        </span>
+      </h1>
 
-              <div className="mb-5 flex items-center justify-center gap-2">
+      {/* Description */}
+      <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">
+        Our goal is to provide reliable technology solutions
+        and professional support that help businesses operate
+        more efficiently.
+      </p>
 
-                <span className="h-2 w-2 rounded-full bg-[#F7941D]" />
+      {/* Buttons */}
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
 
-                <span className="text-xs font-bold uppercase tracking-[2.5px] text-[#F7941D]">
-                  Client Testimonials
-                </span>
+        <Link
+          href="/#contact"
+          className="inline-flex items-center gap-2 rounded-lg bg-[#F7941D] px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#df8214]"
+        >
+          Discuss Your Requirements
+          <ArrowRight size={17} />
+        </Link>
 
-              </div>
+        <a
+          href="#reviews"
+          className="inline-flex items-center gap-2 rounded-lg border-2 border-white/80 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#0B3C5D]"
+        >
+          Read Reviews
+        </a>
 
-              <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
-                What Our{" "}
-                <span className="text-[#F7941D]">
-                  Clients Say
-                </span>
-              </h1>
+      </div>
 
-              <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">
-                Our goal is to provide reliable technology solutions
-                and professional support that help businesses operate
-                more efficiently.
-              </p>
-
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#F7941D] px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#df8214]"
-                >
-                  Discuss Your Requirements
-                  <ArrowRight size={17} />
-                </Link>
-
-                <a
-                  href="#reviews"
-                  className="inline-flex items-center gap-2 rounded-lg border-2 border-white/80 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-[#0B3C5D]"
-                >
-                  Read Reviews
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-        </section>
+    </div>
+  </div>
+</section>
 
         {/* =========================
             INTRO
