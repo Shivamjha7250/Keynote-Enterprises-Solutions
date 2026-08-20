@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/components/home/About.jsx", "src/app/components/home/Services.jsx", "src/app/components/home/Industries.jsx"  ],
   "exclude": ["node_modules"]
 }
